@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Dhanalakshmi 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #00b4db, #0083b0); /* 🌊 Sea Background */
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* 🫧 Floating Bubbles */
+.bubble {
+    position: fixed;
+    bottom: -20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    animation: floatUp 8s linear infinite;
+}
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-900px); opacity: 0; }
+}
+
+/* ✨ Title */
+h1 {
+    font-size: 42px;
+    margin-top: 20px;
+    text-shadow: 0 0 20px #fff, 0 0 40px #00e6ff;
+}
+
+/* 📸 Image */
+img {
+    width: 260px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+img:hover {
+    transform: scale(1.05);
+}
+
+/* 💎 Card UI */
+.card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 85%;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ✍️ Quotes */
+.quote {
+    font-size: 18px;
+    margin: 10px 0;
+    opacity: 0.9;
+}
+
+/* 🎵 Buttons */
+.music-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    color: #0072ff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.music-btn:hover {
+    background: #dff6ff;
+}
+
+/* 🎶 Playlist */
+.song-list button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🎉 Happy Birthday Dhanalakshmi 🎂</h1>
+<h2>(Thanusha 💖)</h2>
+
+<img src="Dhanalakshmi.jpg">
+
+<!-- 💖 Friendship Quotes -->
+<div class="card">
+    <h3>🤍 Male & Female Friendship</h3>
+    <p class="quote">"A true friendship between a boy and girl is beyond love… it's pure understanding."</p>
+    <p class="quote">"No feelings, no expectations… just real care."</p>
+    <p class="quote">"We are not lovers… but our bond is stronger than love."</p>
+    <p class="quote">"A boy-girl friendship is the most honest form of relationship."</p>
+</div>
+
+<!-- 🎂 Birthday Wishes -->
+<div class="card">
+    <h3>🎂 Birthday Wishes</h3>
+    <p class="quote">"May your life be filled with happiness, love, and success."</p>
+    <p class="quote">"You deserve all the beautiful things in this world 💖"</p>
+    <p class="quote">"Keep smiling always… because your smile is priceless."</p>
+    <p class="quote">"Happy Birthday to the most special person in my life 🎉"</p>
+</div>
+
+<!-- 🎵 Music Player -->
+<div class="card">
+    <h3>🎵 Your Favorite Songs</h3>
+
+    <audio id="player" controls style="width:100%;">
+        <source src="song1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="song-list">
+        <button class="music-btn" onclick="playSong('song1.mp3')">Song 1 💖</button>
+        <button class="music-btn" onclick="playSong('song2.mp3')">Song 2 🎶</button>
+        <button class="music-btn" onclick="playSong('song3.mp3')">Song 3 🎧</button>
+    </div>
+</div>
+
+<script>
+// 🎵 Change Songs
+function playSong(song) {
+    let player = document.getElementById("player");
+    player.src = song;
+    player.play();
+}
+
+// 🫧 Floating Bubbles
+setInterval(() => {
+    let bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+
+    let size = Math.random() * 20 + 10;
+    bubble.style.width = size + "px";
+    bubble.style.height = size + "px";
+    bubble.style.left = Math.random() * 100 + "vw";
+
+    document.body.appendChild(bubble);
+
+    setTimeout(() => bubble.remove(), 8000);
+}, 400);
+</script>
+
+</body>
+</html>
